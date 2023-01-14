@@ -1,0 +1,7 @@
+{
+  "server": {
+    "name": "transfer_auth",
+    "version": "1.0",
+    "addr": ":9091"
+  }
+}

@@ -1,0 +1,74 @@
+definitions:
+  models.User:
+    properties:
+      birthDate:
+        type: string
+      blocked:
+        type: boolean
+      country_code:
+        type: string
+      created_at:
+        type: string
+      email:
+        type: string
+      first_name:
+        type: string
+      id:
+        type: string
+      image:
+        type: string
+      last_name:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      updated_at:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /getuser:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Тело
+        in: body
+        name: id
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.User'
+      summary: Получение данных о пользователе
+      tags:
+      - Users
+  /registr:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Тело
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.User'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.User'
+      summary: Регистрация пользователя
+      tags:
+      - Users
+swagger: "2.0"

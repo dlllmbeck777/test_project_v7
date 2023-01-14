@@ -1,0 +1,21 @@
+{
+  "server": {
+    "name": "transfer_auth",
+    "version": "1.0",
+    "addr": ":9091"
+  },
+  "pg": {
+    "user": "habrpguser",
+    "pass": "pgpwd4habr",
+    "db_name": "habrdb",
+    "host": "localhost",
+    "port": "54322"
+  },
+  "redis": {
+    "dsn": "localhost:6388",
+    "key": "token"
+  },
+  "google_settings": {
+    "host_verify_token": "https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token="
+  }
+}
